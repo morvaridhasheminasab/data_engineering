@@ -1,0 +1,36 @@
+
+version: "3.9"
+
+services:
+  nifi:
+    image: apache/nifi:1.23.2
+    container_name: nifi
+    ports:
+      - "8080:8080"
+    environment:
+      NIFI_WEB_HTTP_PORT: 8080
+      NIFI_WEB_HTTP_HOST: 0.0.0.0
+      NIFI_SECURITY_USER_AUTHORIZATION: false
+      NIFI_SECURITY_USER_LOGIN: false
+    volumes:
+      - ./data:/opt/data
+      - ./processed:/opt/processed
+    restart: always
+    networks:
+      - datapipeline
+
+  delivery:
+    build:
+      context: ./delivery
+    container_name: delivery
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./processed:/app/processed
+    restart: always
+    networks:
+      - datapipeline
+
+networks:
+  datapipeline:
+    driver: bridge
