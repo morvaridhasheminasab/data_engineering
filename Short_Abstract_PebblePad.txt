@@ -1,0 +1,1 @@
+This project implements a reproducible batch-processing data architecture using Docker, Apache NiFi, and FastAPI. It automates ingestion, processing, and delivery of time-stamped stock data, ensuring scalability and maintainability. All services run in Docker containers, enabling easy deployment and execution of data pipelines for machine learning support.

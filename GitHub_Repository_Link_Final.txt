@@ -1,0 +1,7 @@
+GitHub Repository Link:
+https://github.com/morvaridhasheminasab/data_engineering
+
+This repository contains the final implementation of a batch-processing data architecture project.
+The solution is fully containerized using Docker and includes microservices for data ingestion,
+preprocessing, storage, and delivery. The architecture can be executed on any machine that supports
+Docker and Docker Compose, ensuring portability and reproducibility of the data pipeline.
