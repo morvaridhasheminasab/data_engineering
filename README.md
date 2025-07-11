@@ -50,3 +50,14 @@ docker-compose up --build
 ---
 
 📝 For full pipeline logic, see: `documentation/Phase2_Ingestion.xml`
+## Phase 3 Summary
+
+This repository now contains the final version of the batch-processing data architecture project, including:
+
+- Fully functional Dockerized microservices
+- Complete project documentation and reflection
+- Data pipeline reproducible on any Docker-enabled system
+- GitHub link document and architecture diagram
+
+This project was submitted as part of the IU course DLMDSEDE02 (Data Engineering).
+
